@@ -18,7 +18,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".PanelInquiry"></activity>
+        <activity android:name=".PanelInquiry" />
+        <activity android:name=".PowerForecastActivity"></activity>
     </application>
 
 </manifest>
