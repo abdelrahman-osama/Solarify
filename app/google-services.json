@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "747422437032-214sjc00ctq1g7rhpc5cd7j7odaomksb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vmal.solarify",
+            "certificate_hash": "875fffb4ce42e05e88a8efa2e4f182d5f52707db"
+          }
+        },
+        {
           "client_id": "747422437032-25k1evee9k0927s3lfdvji3ouq8i9vp7.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
