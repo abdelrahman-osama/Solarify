@@ -6,10 +6,48 @@
     android:layout_height="match_parent"
     tools:context="com.vmal.solarify.PowerForecastActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/power_forecase"
+        android:text="Power Forecast"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/circlebutton"
+        android:text="831 KW.h"
+        android:textAllCaps="false"
+        android:textColor="#000"
+        android:textSize="25sp"
+        android:layout_width="150dp"
+        android:layout_below="@id/power_forecase"
+        android:layout_margin="30dp"
+        android:layout_centerHorizontal="true"
+        android:clickable="false"
+        android:layout_height="150dp"
+        android:background="@layout/buttonshape"
+        />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+        android:id="@+id/current_day"
+        android:layout_below="@id/circlebutton"
+        android:text="Today"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:textSize="20sp"/>
+
     <LinearLayout
         android:id="@+id/week_view"
+        android:layout_below="@id/current_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:orientation="horizontal"
         android:weightSum="6"
         android:elevation="2dp"
@@ -118,7 +156,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:textSize="20sp"
-            android:text="Your Consumption"
+            android:text="Your Daily Average Consumption"
             />
         <TextView
             android:id="@+id/consumption_text"
@@ -131,27 +169,32 @@
             />
     </RelativeLayout>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/myrect2"
         android:elevation="2dp"
         android:layout_below="@+id/relativeLayout"
-        android:weightSum="6">
+        android:weightSum="6"
+        android:clickable="true">
         <TextView
+            android:id="@+id/microwave"
             android:paddingLeft="16dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Microwave"
+            android:text="Detailed Consumption"
             android:textSize="18sp"
             android:layout_weight="5"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="12%"
+            android:text=""
             android:textSize="18sp"
             android:gravity="center"
             android:layout_weight="1"/>
+
     </LinearLayout>
+
 
 </RelativeLayout>

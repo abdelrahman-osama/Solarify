@@ -29,6 +29,7 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
+    provided 'org.glassfish:javax.annotation:10.0-b28'
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support:design:25.3.1'
     compile 'com.squareup.picasso:picasso:2.5.2'
@@ -41,6 +42,12 @@ dependencies {
     compile 'com.afollestad.material-dialogs:core:0.9.4.4'
     compile 'com.github.lzyzsd:circleprogress:1.2.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile 'com.github.lzyzsd:circleprogress:1.2.1'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
     testCompile 'junit:junit:4.12'
+
 }
 apply plugin: 'com.google.gms.google-services'
