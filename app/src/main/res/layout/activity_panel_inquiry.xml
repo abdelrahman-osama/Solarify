@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context="com.vmal.solarify.PanelInquiry">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Do you own a Solar Panel?"
+        android:textColor="@color/primary_text_light"
+        android:gravity="center"
+        android:textSize="28dp"
+        android:layout_margin="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        >
+
+    <ToggleButton
+        android:id="@+id/student"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:textOn="Yes"
+        android:textOff="Yes"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+
+        android:textColor="@drawable/toggle_text"/>
+
+    <View xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/primary_text_light" />
+
+    <ToggleButton
+        android:id="@+id/host"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:textOn="No"
+        android:textOff="No"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@drawable/toggle_text"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
