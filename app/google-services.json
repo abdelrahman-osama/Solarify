@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "747422437032",
+    "firebase_url": "https://solarify-4aae1.firebaseio.com",
+    "project_id": "solarify-4aae1",
+    "storage_bucket": "solarify-4aae1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:747422437032:android:2e55927c77d295ee",
+        "android_client_info": {
+          "package_name": "com.vmal.solarify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "747422437032-25k1evee9k0927s3lfdvji3ouq8i9vp7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vmal.solarify",
+            "certificate_hash": "fd20e96c86409ce644a2d2e20d0694af0c287538"
+          }
+        },
+        {
+          "client_id": "747422437032-k4rorsi5jqeptgkkatd0krlfi23jj7l9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMHNpMkGrzzq47goZa10_7pKHvKLvq44k"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "747422437032-k4rorsi5jqeptgkkatd0krlfi23jj7l9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
