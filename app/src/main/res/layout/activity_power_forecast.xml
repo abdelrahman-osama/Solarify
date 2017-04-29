@@ -14,7 +14,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="30dp"
         android:textStyle="bold"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="15dp"/>
 
     <Button
         android:id="@+id/circlebutton"
@@ -23,8 +23,7 @@
         android:textColor="#000"
         android:textSize="25sp"
         android:layout_width="150dp"
-        android:layout_below="@id/power_forecase"
-        android:layout_margin="30dp"
+        android:layout_below="@id/current_day"
         android:layout_centerHorizontal="true"
         android:clickable="false"
         android:layout_height="150dp"
@@ -35,19 +34,20 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
         android:id="@+id/current_day"
-        android:layout_below="@id/circlebutton"
+        android:layout_below="@id/power_forecase"
         android:text="Today"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         android:textStyle="bold"
         android:textSize="20sp"/>
 
     <LinearLayout
         android:id="@+id/week_view"
-        android:layout_below="@id/current_day"
+        android:layout_below="@id/circlebutton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
+        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         android:weightSum="6"
         android:elevation="2dp"
