@@ -164,6 +164,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void updateUI(FirebaseUser user){
         if(user != null){
             // Start home activity
+            startActivity(new Intent(this, PlanetActivity.class));
 
         }
     }

@@ -19,8 +19,7 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".PlanetActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+        <activity android:name=".PlanetActivity" />
         <activity android:name=".PanelInquiry"></activity>
     </application>
 
