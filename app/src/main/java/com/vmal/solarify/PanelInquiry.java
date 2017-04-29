@@ -1,13 +1,75 @@
 package com.vmal.solarify;
 
+import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+import android.widget.ToggleButton;
 
 public class PanelInquiry extends AppCompatActivity {
+
+    private ToggleButton yesButton;
+    private ToggleButton noButton;
+    private FloatingActionButton mNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_panel_inquiry);
+
+        mNext = (FloatingActionButton) findViewById(R.id.next_button);
+        yesButton = (ToggleButton) findViewById(R.id.student);
+        noButton = (ToggleButton) findViewById(R.id.host);
+
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                noButton.setChecked(false);
+            }
+        });
+        noButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                yesButton.setChecked(false);
+            }
+        });
+
+
+
+
+
+        mNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(v==mNext)
+                {
+                    SharedPreferences sharedPref = getSharedPreferences("ApplicationModeFile", Context.MODE_PRIVATE);
+                    if(yesButton.isChecked()){
+                        noButton.setChecked(false);
+//                        SharedPreferences.Editor editor = sharedPref.edit();
+//                        editor.putString("application_mode","student_mode");
+//                        editor.commit();
+                    }else{ if(noButton.isChecked()){
+                        yesButton.setChecked(true);
+//                        SharedPreferences.Editor editor = sharedPref.edit();
+//                        editor.putString("application_mode","list_mode");
+//                        editor.commit();
+                    } else{
+                        Toast.makeText(PanelInquiry.this, "Please choose what you are looking for!", Toast.LENGTH_SHORT).show();
+                        return;
+                    }}
+                    finish();
+                    Intent i = new Intent(PanelInquiry.this,PowerForecastActivity.class);
+                    startActivity(i);
+                }
+            }
+        });
+
+
     }
 }
+

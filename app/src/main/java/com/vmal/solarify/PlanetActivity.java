@@ -64,9 +64,9 @@ public class PlanetActivity extends AppCompatActivity {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             ImageView imageView = new ImageView(mContext);
-            Picasso.with(mContext).load(mResources[position]).fit().centerInside().memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView);
 
-            container.addView(imageView);
+            Picasso.with(mContext).load(mResources[position]).fit().centerInside().memoryPolicy(MemoryPolicy.NO_CACHE).into(imageView);
+            container.addView(imageView,0);
 
             return imageView;
         }

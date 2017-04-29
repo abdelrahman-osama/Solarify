@@ -19,8 +19,9 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".PanelInquiry" />
+        <activity android:name=".PowerForecastActivity"></activity>
         <activity android:name=".PlanetActivity" />
-        <activity android:name=".PanelInquiry"></activity>
     </application>
 
 </manifest>
