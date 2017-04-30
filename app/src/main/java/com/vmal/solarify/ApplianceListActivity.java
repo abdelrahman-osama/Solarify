@@ -34,16 +34,8 @@ public class ApplianceListActivity extends AppCompatActivity {
 
     ListView mRecyclerView;
     List<Appliance>numOfAppliances;
+    ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
 
-    class  Appliance{
-        String name;
-        int value;
-
-        public Appliance(String name, int value) {
-            this.name = name;
-            this.value = value;
-        }
-    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,9 +46,14 @@ public class ApplianceListActivity extends AppCompatActivity {
         findViewById(R.id.next_fab).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (FirebaseAuth.getInstance().getCurrentUser()!=null)
+                for (int i = 0;i<numOfAppliances.size();i++)
+                if (FirebaseAuth.getInstance().getCurrentUser()!=null) {
                     FirebaseDatabase.getInstance().getReference().child("appliances").child(FirebaseAuth.getInstance()
-                            .getCurrentUser().getUid()).setValue(numOfAppliances);
+                            .getCurrentUser().getUid()).child(numOfAppliances.get(i).name).child("number_of_devices").setValue(numOfAppliances.get(i).value);
+                    int power = Integer.parseInt(formList.get(i).get("value"));
+                    FirebaseDatabase.getInstance().getReference().child("appliances").child(FirebaseAuth.getInstance()
+                            .getCurrentUser().getUid()).child(numOfAppliances.get(i).name).child("power").setValue(power);
+                }
             }
         });
         //Make call to AsyncTask
@@ -86,7 +83,7 @@ public class ApplianceListActivity extends AppCompatActivity {
 
     private class AsyncFetch extends AsyncTask<Void, Void , String>{
 
-        ArrayList<HashMap<String, String>> formList = new ArrayList<HashMap<String, String>>();
+
 
 
         @Override
@@ -279,10 +276,16 @@ public class ApplianceListActivity extends AppCompatActivity {
                 final int pos = position;
                 name = (TextView) v.findViewById(R.id.appi_name);
                 num = (TextView) v.findViewById(R.id.ad_max_g_text_num);
+                num.setTag(new Integer(position));
+                num.setOnClickListener(null);
+
                 name.setText(p);
-
-
+                num.setText(numOfAppliances.get(position).value+"");
                 final ImageView imageView = (ImageView) v.findViewById(R.id.ad_max_g_text_minus);
+                if (numOfAppliances.get(position).value == 0)
+                    imageView.setAlpha(0.12f);
+                else imageView.setAlpha(1f);
+
                 v.findViewById(R.id.ad_max_g_text_minus).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -290,11 +293,14 @@ public class ApplianceListActivity extends AppCompatActivity {
                         if (number == 1) {
                             imageView.setAlpha(0.12f);
                             num.setText("0");
+                            numOfAppliances.get(pos).value = number - 1;
                         } else if (number > 1) {
                             num.setText(number - 1 + "");
+                            numOfAppliances.get(pos).value = number - 1;
                         }
 
-                        numOfAppliances.get(pos).value = number - 1;
+
+                        notifyDataSetChanged();
                     }
                 });
                 v.findViewById(R.id.ad_max_g_text_plus).setOnClickListener(new View.OnClickListener() {
@@ -306,6 +312,7 @@ public class ApplianceListActivity extends AppCompatActivity {
                         }
                         num.setText(number + 1 + "");
                         numOfAppliances.get(pos).value = number + 1;
+                        notifyDataSetChanged();
                     }
                 });
             }
