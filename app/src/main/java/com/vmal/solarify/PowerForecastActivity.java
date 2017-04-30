@@ -70,6 +70,10 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
     int totalconsumption;
 
     @RequiresApi(api = Build.VERSION_CODES.M)
+    private String lat;
+    private String lon;
+    String season;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -169,6 +173,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
         String BASE_URL = "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=KhjqE5Ln7Ri9ckKXIej5onPadY3FDvCzlusgqPYB";
 
+
         String lati = "30";
         String lon = "29";
         if(this.lat!=-1){
@@ -180,6 +185,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         }
         String systemCapacity = "4";
         String azimuth = "180";
+
         tilt();
         String arrayType = "1"; //fixed
         String moduleType = "0"; //fixed
@@ -354,12 +360,60 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
     void tilt() {
 
-        int month = new GregorianCalendar().get(Calendar.MONTH);
-        Log.d("month", month + 1 + "");
+         int month = new GregorianCalendar().get(Calendar.MONTH) +1;
+       Log.d("month", month+"");
 
+       if(Double.parseDouble(lat)<0){
+           if(month == 9 || month == 10 || month == 11){
+               season = "spring";
+           }
+           else
+               if(month == 12 || month == 1 || month == 2){
+                   season = "summer";
+               }else{
+                   if(month>2 && month<6){
+                       season = "fall";
+                   }else{
+                       if (month > 5 && month < 9) {
+                           season = "winter";
+                       }
+               }
+           }
 
-        tilt = "40";
+           }
+       else{ // bigger than zero
 
+           if(month == 9 || month == 10 || month == 11){
+               season = "fall";
+           }else
+           if(month == 12 || month == 1 || month == 2){
+               season = "winter";
+           }else{
+               if(month>2 && month<6){
+                   season = "spring";
+               }else{
+                   if(month>5 && month<9){
+                       season = "summer";
+                   }
+
+               }
+           }
+
+       }
+       
+      double latit = Double.parseDouble(lat);
+       if(season == "winter"){
+           tilt = String.valueOf(Math.abs(latit)*0.9+29);
+       }
+
+       if (season== "summer"){
+           tilt= String.valueOf(Math.abs(latit)*0.9-23.5);
+       }
+       if (season=="spring"|| season=="fall") {
+           tilt = String.valueOf(Math.abs(latit) - 2.5);
+
+       }
+       Log.d("tilt", tilt);
     }
 
     int poaToProduction(double poa) {
@@ -410,6 +464,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
     @Override
     public void onConnectionSuspended(int i) {
 
+
     }
     private GoogleApiClient mGoogleApiClient;
 
@@ -438,6 +493,8 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
             }
 
 
+
+
         } else {
             if (provider != null) {
                 Location location = locationManager.getLastKnownLocation(provider);
@@ -454,6 +511,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
         }
     }
+
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
