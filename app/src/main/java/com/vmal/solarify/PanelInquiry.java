@@ -32,8 +32,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PanelInquiry extends AppCompatActivity {
 
-    private ImageButton yesButton;
-    private ImageButton noButton;
+    private ToggleButton yesButton;
+    private ToggleButton noButton;
     private FloatingActionButton mNext;
 
     private static final String TAG = "PanelInquiry";
@@ -46,8 +46,8 @@ public class PanelInquiry extends AppCompatActivity {
 
 
         mNext = (FloatingActionButton) findViewById(R.id.next_button);
-        yesButton = (ImageButton) findViewById(R.id.student);
-        noButton = (ImageButton) findViewById(R.id.host);
+        yesButton = (ToggleButton) findViewById(R.id.student);
+        noButton = (ToggleButton) findViewById(R.id.host);
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,8 +61,6 @@ public class PanelInquiry extends AppCompatActivity {
                 yesButton.setChecked(false);
             }
         });
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
 
 
 
