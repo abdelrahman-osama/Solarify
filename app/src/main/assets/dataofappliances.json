@@ -1,0 +1,487 @@
+{
+    "appliances":[
+  {
+     "A":"Automatic defrost"
+    ,"B":"700"
+  },
+  {
+     "A":"Blender"
+    ,"B":"300"
+  },
+  {
+     "A":"Broiler"
+    ,"B":"2000"
+  },
+  {
+     "A":"Can opener"
+    ,"B":"100"
+  },
+  {
+     "A":"Carving knife"
+    ,"B":"100"
+  },
+  {
+     "A":"Coffee machine"
+    ,"B":"1500"
+  },
+  {
+     "A":"Coffee maker"
+    ,"B":"800"
+  },
+  {
+     "A":"Deep fat fryer"
+    ,"B":"1448"
+  },
+  {
+     "A":"Dishwasher"
+    ,"B":"1500"
+  },
+  {
+     "A":"Electric kettle"
+    ,"B":"2000"
+  },
+  {
+     "A":"Food blender"
+    ,"B":"300"
+  },
+  {
+     "A":"Food mixer"
+    ,"B":"127"
+  },
+  {
+     "A":"Frying pan"
+    ,"B":"1200"
+  },
+  {
+     "A":"Garbage disposal"
+    ,"B":"445"
+  },
+  {
+     "A":"Hot plate"
+    ,"B":"1200"
+  },
+  {
+     "A":"Manual defrost"
+    ,"B":"540"
+  },
+  {
+     "A":"Microwave"
+    ,"B":"1500"
+  },
+  {
+     "A":"Oven"
+    ,"B":"3000"
+  },
+  {
+     "A":"Popcorn popper"
+    ,"B":"1400"
+  },
+  {
+     "A":"Roaster"
+    ,"B":"1333"
+  },
+  {
+     "A":"Sink waste disposal"
+    ,"B":"450"
+  },
+  {
+     "A":"Slow cooker"
+    ,"B":"200"
+  },
+  {
+     "A":"Toaster"
+    ,"B":"1500"
+  },
+  {
+     "A":"Toaster oven"
+    ,"B":"1500"
+  },
+  {
+     "A":"Trash compactor"
+    ,"B":"400"
+  },
+  {
+     "A":"Waffle iron"
+    ,"B":"1200"
+  },
+  {
+     "A":"Freezer new"
+    ,"B":"45"
+  },
+  {
+     "A":"Freezer old"
+    ,"B":"110"
+  },
+  {
+     "A":"Fridge new"
+    ,"B":"20"
+  },
+  {
+     "A":"Fridge old"
+    ,"B":"55"
+  },
+  {
+     "A":"Clock"
+    ,"B":"1"
+  },
+  {
+     "A":"Electric blanket"
+    ,"B":"200"
+  },
+  {
+     "A":"Heating pad"
+    ,"B":"65"
+  },
+  {
+     "A":"Waterbed heater"
+    ,"B":"400"
+  },
+  {
+     "A":"Night ligt"
+    ,"B":"25"
+  },
+  {
+     "A":"Clock radio"
+    ,"B":"1"
+  },
+  {
+     "A":"Curling iron"
+    ,"B":"90"
+  },
+  {
+     "A":"Electric shaver"
+    ,"B":"20"
+  },
+  {
+     "A":"Hair blow dryer"
+    ,"B":"1500"
+  },
+  {
+     "A":"Jacuzzi_spa pump"
+    ,"B":"1300"
+  },
+  {
+     "A":"Power shower"
+    ,"B":"240"
+  },
+  {
+     "A":"Shaver"
+    ,"B":"15"
+  },
+  {
+     "A":"Toothbrush"
+    ,"B":"1"
+  },
+  {
+     "A":"Water pik"
+    ,"B":"100"
+  },
+  {
+     "A":"Computer desktop variant"
+    ,"B":"200"
+  },
+  {
+     "A":"Laptop"
+    ,"B":"50"
+  },
+  {
+     "A":"Computer monitor lcd or led"
+    ,"B":"50"
+  },
+  {
+     "A":"Printer"
+    ,"B":"100"
+  },
+  {
+     "A":"Xbox 360"
+    ,"B":"160"
+  },
+  {
+     "A":"Iphone"
+    ,"B":"4"
+  },
+  {
+     "A":"Phone cordless"
+    ,"B":"3"
+  },
+  {
+     "A":"Printer"
+    ,"B":"5"
+  },
+  {
+     "A":"Modem_adsl cable"
+    ,"B":"7"
+  },
+  {
+     "A":"Mobile phone"
+    ,"B":"4"
+  },
+  {
+     "A":"Router wifi"
+    ,"B":"24"
+  },
+  {
+     "A":"Clothes dryer"
+    ,"B":"4000"
+  },
+  {
+     "A":"Clothes dryer gas heated"
+    ,"B":"400"
+  },
+  {
+     "A":"Clothing iron"
+    ,"B":"1100"
+  },
+  {
+     "A":"Vacuum cleaner"
+    ,"B":"700"
+  },
+  {
+     "A":"Washing machine"
+    ,"B":"500"
+  },
+  {
+     "A":"Tumbler dryer"
+    ,"B":"5000"
+  },
+  {
+     "A":"Band saw"
+    ,"B":"1100"
+  },
+  {
+     "A":"Belt sander 3 inch"
+    ,"B":"1000"
+  },
+  {
+     "A":"Chain saw"
+    ,"B":"1100"
+  },
+  {
+     "A":"Circular saw 7 inch"
+    ,"B":"900"
+  },
+  {
+     "A":"Circular saw 8 inch"
+    ,"B":"1400"
+  },
+  {
+     "A":"Disc sander 9 inch"
+    ,"B":"1200"
+  },
+  {
+     "A":"Drill"
+    ,"B":"1000"
+  },
+  {
+     "A":"Floor polisher"
+    ,"B":"305"
+  },
+  {
+     "A":"Garage door opener"
+    ,"B":"350"
+  },
+  {
+     "A":"Hedge trimmer"
+    ,"B":"450"
+  },
+  {
+     "A":"Lawnmower"
+    ,"B":"1400"
+  },
+  {
+     "A":"Weed eater"
+    ,"B":"500"
+  },
+  {
+     "A":"Strimmer"
+    ,"B":"400"
+  },
+  {
+     "A":"Air conditioner 1 room"
+    ,"B":"1100"
+  },
+  {
+     "A":"Air conditioner central"
+    ,"B":"5000"
+  },
+  {
+     "A":"Dehumidifier"
+    ,"B":"350"
+  },
+  {
+     "A":"Humidifier"
+    ,"B":"1000"
+  },
+  {
+     "A":"Stock tank heater"
+    ,"B":"100"
+  },
+  {
+     "A":"Submersible pool pump"
+    ,"B":"400"
+  },
+  {
+     "A":"Water heater"
+    ,"B":"2500"
+  },
+  {
+     "A":"Water heater with quick recovery"
+    ,"B":"4500"
+  },
+  {
+     "A":"Water softener"
+    ,"B":"2"
+  },
+  {
+     "A":"Well pump"
+    ,"B":"2500"
+  },
+  {
+     "A":"Fan attic"
+    ,"B":"370"
+  },
+  {
+     "A":"Fan ceiling or circulating"
+    ,"B":"80"
+  },
+  {
+     "A":"Fan portable"
+    ,"B":"100"
+  },
+  {
+     "A":"Fan rollaway"
+    ,"B":"171"
+  },
+  {
+     "A":"Fan window"
+    ,"B":"200"
+  },
+  {
+     "A":"Furnace blower"
+    ,"B":"1000"
+  },
+  {
+     "A":"Portable heater"
+    ,"B":"1500"
+  },
+  {
+     "A":"Heat lamp"
+    ,"B":"250"
+  },
+  {
+     "A":"Sewing machine"
+    ,"B":"100"
+  },
+  {
+     "A":"Sun lamp"
+    ,"B":"279"
+  },
+  {
+     "A":"Fan for table"
+    ,"B":"25"
+  },
+  {
+     "A":"Engine block heater"
+    ,"B":"1000"
+  },
+  {
+     "A":"Car stereo"
+    ,"B":"8"
+  },
+  {
+     "A":"Lcd tv"
+    ,"B":"250"
+  },
+  {
+     "A":"Plasma tv"
+    ,"B":"345"
+  },
+  {
+     "A":"Radio"
+    ,"B":"10"
+  },
+  {
+     "A":"Satellite dish"
+    ,"B":"30"
+  },
+  {
+     "A":"Stereo"
+    ,"B":"60"
+  },
+  {
+     "A":"Stereo portable"
+    ,"B":"20"
+  },
+  {
+     "A":"Tv box"
+    ,"B":"23"
+  },
+  {
+     "A":"Game console generic"
+    ,"B":"50"
+  },
+  {
+     "A":"Dvd player"
+    ,"B":"15"
+  },
+  {
+     "A":"Wii"
+    ,"B":"45"
+  },
+  {
+     "A":"Play station 2"
+    ,"B":"50"
+  },
+  {
+     "A":"Tv lcd 45 inch"
+    ,"B":"133"
+  },
+  {
+     "A":"Tv led 45 inch"
+    ,"B":"88"
+  },
+  {
+     "A":"Tv plasma 45 inch"
+    ,"B":"288"
+  },
+  {
+     "A":"Tv lcd 32 inch"
+    ,"B":"55"
+  },
+  {
+     "A":"Tv led 32 inch"
+    ,"B":"61"
+  },
+  {
+     "A":"Tv plasma 32 inch"
+    ,"B":"119"
+  },
+  {
+     "A":"Tv lcd 19 inch"
+    ,"B":"50"
+  },
+  {
+     "A":"Tv led 19 inch"
+    ,"B":"50"
+  },
+  {
+     "A":"Tv plasma 19 inch"
+    ,"B":"100"
+  },
+  {
+     "A":"Cd player"
+    ,"B":"10"
+  },
+  {
+     "A":"Amplifier"
+    ,"B":"70"
+  },
+  {
+     "A":"Television, rear projection"
+    ,"B":"200"
+  },
+  {
+     "A":"Tv standby"
+    ,"B":"6"
+  }]
+}
