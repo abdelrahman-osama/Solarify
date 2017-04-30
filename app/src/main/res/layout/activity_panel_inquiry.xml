@@ -4,9 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@drawable/bg_op"
     tools:context="com.vmal.solarify.PanelInquiry">
 
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_earth"
+        android:scaleType="centerCrop"
+
+        />
 
     <TextView
         android:paddingTop="80dp"
@@ -15,54 +23,32 @@
         android:layout_height="wrap_content"
         android:text="Do you own a Solar Panel?"
         android:textColor="@color/primary_text_light"
-        android:gravity="left"
+        android:gravity="center"
         android:layout_marginStart="10dp"
         android:textSize="28dp"
         android:layout_margin="16dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+
+
+
+
+    <ToggleButton
+        android:id="@+id/select"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/toggle_text"
+        android:textOn=""
         android:layout_below="@+id/textView"
-        android:layout_marginTop="80dp"
-        android:orientation="vertical"
-        >
+        android:layout_above="@+id/next_button"
+        android:textOff=""
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        android:textAlignment="center"
+        />
 
-        <ToggleButton
-            android:id="@+id/student"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:textOn="Yes"
-            android:textOff="Yes"
-            android:textSize="20sp"
-            android:textAllCaps="false"
-            android:textAlignment="center"
 
-            android:textColor="@drawable/toggle_text"/>
 
-        <View xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginEnd="76dp"
-            android:layout_marginTop="8dp"
-            android:background="@color/primary_text_light" />
 
-        <ToggleButton
-            android:id="@+id/host"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/transparent"
-            android:textOn="No"
-            android:textOff="No"
-            android:textAllCaps="false"
-            android:textSize="20sp"
-            android:textAlignment="center"
-            android:textColor="@drawable/toggle_text"/>
-
-    </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/next_button"
@@ -71,6 +57,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        android:src="@drawable/ic_keyboard_arrow_right_black_24dp"/>
+        android:src="@drawable/ic_small_rocket_ship_silhouette"/>
 
 </RelativeLayout>
