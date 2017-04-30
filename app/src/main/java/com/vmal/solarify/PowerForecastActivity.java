@@ -176,11 +176,11 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
         String lati = "30";
         String lon = "29";
-        if(this.lat!=-1){
-            lati = (int)this.lat+"";
-            lon = (int)lng+"";
-            Log.d("PowerForecastActivity",this.lat+"");
-            Log.d("PowerForecastActivity",this.lng+"");
+        if(this.lat2!=-1){
+            lati = (int)this.lat2+"";
+            lon = (int)lng2+"";
+            Log.d("PowerForecastActivity",this.lat2+"");
+            Log.d("PowerForecastActivity",this.lng2+"");
             Log.d("PowerForecastActivity","gotlocation :D");
         }
         String systemCapacity = "4";
@@ -429,8 +429,8 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
     }
 
-    double lat = -1;
-    double lng = -1;
+    double lat2 = -1;
+    double lng2 = -1;
     LocationManager locationManager;
     private String provider = "";
 
@@ -505,9 +505,9 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
     }
     @Override
     public void onLocationChanged(Location location) {
-        if(lat == -1) {
-            lat =(location.getLatitude());
-            lng =(location.getLongitude());
+        if(lat2 == -1) {
+            lat2 =(location.getLatitude());
+            lng2 =(location.getLongitude());
 
         }
     }
