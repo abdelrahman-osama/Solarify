@@ -145,12 +145,13 @@
     </LinearLayout>
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
+        android:id="@+id/avg_consumption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/myrect2"
         android:elevation="2dp"
-        android:layout_below="@+id/week_view">
+        android:layout_below="@+id/week_view"
+        android:clickable="true">
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -171,31 +172,7 @@
     </RelativeLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/myrect2"
-        android:elevation="2dp"
-        android:layout_below="@+id/relativeLayout"
-        android:weightSum="6"
-        android:clickable="true">
-        <TextView
-            android:id="@+id/microwave"
-            android:paddingLeft="16dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Detailed Consumption"
-            android:textSize="18sp"
-            android:layout_weight="5"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="18sp"
-            android:gravity="center"
-            android:layout_weight="1"/>
 
-    </LinearLayout>
 
 
 </RelativeLayout>

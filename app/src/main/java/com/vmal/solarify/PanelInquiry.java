@@ -80,7 +80,7 @@ public class PanelInquiry extends AppCompatActivity {
 //                        editor.putString("application_mode","list_mode");
 //                        editor.commit();
                     } else{
-                        Toast.makeText(PanelInquiry.this, "Please choose what you are looking for!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(PanelInquiry.this, "Please choose what you are looking for.", Toast.LENGTH_SHORT).show();
                         return;
                     }}
                     finish();
