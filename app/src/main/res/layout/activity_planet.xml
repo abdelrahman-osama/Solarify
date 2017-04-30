@@ -4,17 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context="com.vmal.solarify.PlanetActivity">
 
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/bg_earth"
+        android:scaleType="centerCrop"
+
+        />
 
     <TextView
+        android:paddingTop="80dp"
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Where do you currently reside?"
         android:textColor="@color/primary_text_light"
         android:gravity="center"
-        android:textSize="28dp"
+        android:textSize="24dp"
         android:layout_margin="16dp"/>
 
     <RelativeLayout
@@ -50,5 +60,6 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
+        android:tint="@color/transparent"
         android:src="@drawable/ic_small_rocket_ship_silhouette"/>
 </RelativeLayout>

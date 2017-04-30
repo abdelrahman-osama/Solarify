@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/myrect2"
+        android:elevation="2dp"
+        android:weightSum="6">
+        <TextView
+            android:id="@+id/appi_name"
+            android:paddingLeft="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Microwave"
+            android:textSize="18sp"
+            android:layout_weight="4"/>
+        <LinearLayout
+            android:id="@+id/max_guests_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_gravity="center"
+            android:gravity="end"
+            android:elevation="2dp">
+
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_remove_black_24dp"
+                android:id="@+id/ad_max_g_text_minus"
+                android:alpha=".12"
+                android:background="@color/transparent"
+
+                />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:layout_weight="0">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divider_dark"
+                    android:layout_gravity="center"
+                    >
+                </View>
+
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textColor="@color/primary_text_dark"
+                android:textSize="22sp"
+                android:id="@+id/ad_max_g_text_num" />
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp">
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/divider_dark"
+                    android:layout_gravity="center"
+                    >
+                </View>
+            </FrameLayout>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_add_primary_color_24dp"
+                android:foregroundTint="@color/colorPrimary"
+                android:id="@+id/ad_max_g_text_plus"
+                android:background="@color/transparent" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

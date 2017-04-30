@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .build();
 
 
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
+
         // options specified by gso.
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .enableAutoManage(this /* FragmentActivity */, this /* OnConnectionFailedListener */)
@@ -61,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         mAuth = FirebaseAuth.getInstance();
 
         updateUI(mAuth.getCurrentUser());
+
+
         findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -164,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void updateUI(FirebaseUser user){
         if(user != null){
             // Start home activity
-            startActivity(new Intent(this, PanelInquiry.class));
+            startActivity(new Intent(this, PlanetActivity.class));
 
         }
     }

@@ -2,6 +2,8 @@ package com.vmal.solarify;
 
 import android.animation.Animator;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.squareup.picasso.MemoryPolicy;
 import com.squareup.picasso.Picasso;
@@ -23,7 +26,7 @@ public class PlanetActivity extends AppCompatActivity {
 
     final static String TAG = "PlanetActivity";
     int[] mResources = {
-            R.drawable.planet_earth,
+            R.drawable.earth,
             R.drawable.mars,
     };
     ViewPager mViewPager;
@@ -32,7 +35,18 @@ public class PlanetActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planet);
 
-
+        Typeface face = Typeface.createFromAsset(getAssets(),
+                "Pacifico_Regular.ttf");
+        ((TextView)findViewById(R.id.textView)).setTypeface(face);
+        findViewById(R.id.next_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(mViewPager.getCurrentItem()==0){
+                    startActivity(new Intent(PlanetActivity.this,PanelInquiry.class));
+                    finish();
+                }
+            }
+        });
 
         CustomPagerAdapter mCustomPagerAdapter = new CustomPagerAdapter(this);
 
