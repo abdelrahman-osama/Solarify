@@ -34,8 +34,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PanelInquiry extends AppCompatActivity {
 
+
     private ToggleButton select;
 
+
+  
+ 
     private FloatingActionButton mNext;
 
 
@@ -51,7 +55,9 @@ public class PanelInquiry extends AppCompatActivity {
         ((TextView)findViewById(R.id.textView)).setTypeface(face);
 
         mNext = (FloatingActionButton) findViewById(R.id.next_button);
+
         select = (ToggleButton) findViewById(R.id.select);
+
 
 
         select.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +66,7 @@ public class PanelInquiry extends AppCompatActivity {
 
             }
         });
+
 
 
 

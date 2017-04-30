@@ -364,7 +364,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
          int month = new GregorianCalendar().get(Calendar.MONTH) +1;
        Log.d("month", month+"");
 
-       if(Double.parseDouble(lat)<0){
+       if(lat2<0){
            if(month == 9 || month == 10 || month == 11){
                season = "spring";
            }
@@ -402,7 +402,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
        }
        
-      double latit = Double.parseDouble(lat);
+      double latit= lat2;
        if(season == "winter"){
            tilt = String.valueOf(Math.abs(latit)*0.9+29);
        }
