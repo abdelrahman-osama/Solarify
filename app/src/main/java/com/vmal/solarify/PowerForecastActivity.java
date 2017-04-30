@@ -45,6 +45,10 @@ public class PowerForecastActivity extends AppCompatActivity {
     int area;
     double efficiency;
     int[] sunTime;
+    private String lat;
+    private String lon;
+    String season;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,10 +83,11 @@ public class PowerForecastActivity extends AppCompatActivity {
 
         String BASE_URL = "https://developer.nrel.gov/api/pvwatts/v5.json?api_key=KhjqE5Ln7Ri9ckKXIej5onPadY3FDvCzlusgqPYB";
 
-        String lat = "30";
-        String lon = "30";
-        String systemCapacity = "4";
-        String azimuth = "180";
+        
+        lat = "30.0751609";
+        lon = "31.016655";
+        String systemCapacity = "4"; //ignored
+        String azimuth = "180"; //ignored
         tilt();
         String arrayType = "1"; //fixed
         String moduleType = "0"; //fixed
@@ -264,14 +269,60 @@ public class PowerForecastActivity extends AppCompatActivity {
 
    void tilt(){
 
-       int month = new GregorianCalendar().get(Calendar.MONTH);
-       Log.d("month", month+1+"");
+       int month = new GregorianCalendar().get(Calendar.MONTH) +1;
+       Log.d("month", month+"");
 
+       if(Double.parseDouble(lat)<0){
+           if(month == 9 || month == 10 || month == 11){
+               season = "spring";
+           }
+           else
+               if(month == 12 || month == 1 || month == 2){
+                   season = "summer";
+               }else{
+                   if(month>2 && month<6){
+                       season = "fall";
+                   }else{
+                       if (month > 5 && month < 9) {
+                           season = "winter";
+                       }
+               }
+           }
 
+           }
+       else{ // bigger than zero
 
+           if(month == 9 || month == 10 || month == 11){
+               season = "fall";
+           }else
+           if(month == 12 || month == 1 || month == 2){
+               season = "winter";
+           }else{
+               if(month>2 && month<6){
+                   season = "spring";
+               }else{
+                   if(month>5 && month<9){
+                       season = "summer";
+                   }
 
-       tilt = "40";
+               }
+           }
 
+       }
+
+       double latit = Double.parseDouble(lat);
+       if(season == "winter"){
+           tilt = String.valueOf(Math.abs(latit)*0.9+29);
+       }
+
+       if (season== "summer"){
+           tilt= String.valueOf(Math.abs(latit)*0.9-23.5);
+       }
+       if (season=="spring"|| season=="fall") {
+           tilt = String.valueOf(Math.abs(latit) - 2.5);
+
+       }
+       Log.d("tilt", tilt);
    }
 
    int poaToProduction(double poa){

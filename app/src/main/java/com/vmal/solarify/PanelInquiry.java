@@ -3,12 +3,15 @@ package com.vmal.solarify;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.Image;
 import android.os.AsyncTask;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
@@ -29,8 +32,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class PanelInquiry extends AppCompatActivity {
 
-    private ToggleButton yesButton;
-    private ToggleButton noButton;
+    private ImageButton yesButton;
+    private ImageButton noButton;
     private FloatingActionButton mNext;
 
     private static final String TAG = "PanelInquiry";
@@ -43,8 +46,8 @@ public class PanelInquiry extends AppCompatActivity {
 
 
         mNext = (FloatingActionButton) findViewById(R.id.next_button);
-        yesButton = (ToggleButton) findViewById(R.id.student);
-        noButton = (ToggleButton) findViewById(R.id.host);
+        yesButton = (ImageButton) findViewById(R.id.student);
+        noButton = (ImageButton) findViewById(R.id.host);
 
         yesButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +61,8 @@ public class PanelInquiry extends AppCompatActivity {
                 yesButton.setChecked(false);
             }
         });
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
 
 
