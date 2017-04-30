@@ -1,10 +1,13 @@
 package com.vmal.solarify;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import org.json.JSONException;
@@ -38,6 +41,7 @@ public class PowerForecastActivity extends AppCompatActivity {
     Double[] week;
     String[] acData;
     String tilt;
+    RelativeLayout avgConsumption;
     int area;
     double efficiency;
     int[] sunTime;
@@ -56,7 +60,16 @@ public class PowerForecastActivity extends AppCompatActivity {
         Day6 = (TextView) findViewById(R.id.day6);
         week = new Double[7];
         sunTime = new int[7];
+        avgConsumption = (RelativeLayout)findViewById(R.id.avg_consumption);
         getPowerData();
+
+        avgConsumption.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent i = new Intent(PowerForecastActivity.this,  ApplianceListActivity.class);
+//                startActivity(i);
+            }
+        });
 
 
     }
