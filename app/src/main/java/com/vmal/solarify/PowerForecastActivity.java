@@ -74,6 +74,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
     private String lon;
     String season;
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
