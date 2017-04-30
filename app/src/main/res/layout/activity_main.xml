@@ -10,8 +10,11 @@
         android:id="@+id/icon"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bg"
-        android:scaleType="centerCrop"
+        android:src="@drawable/logo_login"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="60dp"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/sign_in"
         />
 
 
