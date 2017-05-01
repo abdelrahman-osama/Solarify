@@ -1,6 +1,7 @@
 package com.vmal.solarify;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -44,7 +45,10 @@ public class ApplianceConsumptionActivity extends AppCompatActivity {
                         FirebaseDatabase.getInstance().getReference().child("appliances").child(FirebaseAuth.getInstance()
                                 .getCurrentUser().getUid()).child(numOfAppliances.get(i).name).child("number_of_hours").setValue(numOfAppliances.get(i).value);
                     }
+                startActivity(new Intent(ApplianceConsumptionActivity.this,PowerForecastActivity.class));
+                finish();
             }
+
         });
 
         FirebaseDatabase.getInstance().getReference("appliances").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {

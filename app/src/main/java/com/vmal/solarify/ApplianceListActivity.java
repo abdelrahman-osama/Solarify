@@ -1,10 +1,12 @@
 package com.vmal.solarify;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Rect;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.AppCompatAutoCompleteTextView;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -54,6 +56,9 @@ public class ApplianceListActivity extends AppCompatActivity {
                     FirebaseDatabase.getInstance().getReference().child("appliances").child(FirebaseAuth.getInstance()
                             .getCurrentUser().getUid()).child(numOfAppliances.get(i).name).child("power").setValue(power);
                 }
+
+                startActivity(new Intent(ApplianceListActivity.this, ApplianceConsumptionActivity.class));
+                finish();
             }
         });
         //Make call to AsyncTask

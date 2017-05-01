@@ -84,8 +84,9 @@ public class PanelInquiry extends AppCompatActivity {
 //                        editor.putString("application_mode","student_mode");
 //                        editor.commit();
                     } else{
-                        Toast.makeText(PanelInquiry.this, "Please choose what you are looking for.", Toast.LENGTH_SHORT).show();
-                        return;
+                        Intent i = new Intent(PanelInquiry.this,TutorialActivity.class);
+                        startActivity(i);
+                        finish();
                     }}
 
                 }
