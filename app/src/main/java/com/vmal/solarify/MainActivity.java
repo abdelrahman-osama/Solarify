@@ -58,9 +58,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
                 .build();
 
         mAuth = FirebaseAuth.getInstance();
-
-        updateUI(mAuth.getCurrentUser());
-
+        if(mAuth.getCurrentUser()!=null)
+        {
+            startActivity(new Intent(this, PlanetActivity.class));
+            finish();
+        }
 
         findViewById(R.id.sign_in_button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+
     }
 
     private void handleSignInResult(GoogleSignInResult result) {
@@ -166,7 +168,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         if(user != null){
             // Start home activity
             startActivity(new Intent(this, PlanetActivity.class));
-
+            finish();
         }
     }
 

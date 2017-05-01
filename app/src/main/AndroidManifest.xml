@@ -26,7 +26,8 @@
         <activity android:name=".PlanetActivity" />
         <activity android:name=".PanelInquiry" />
         <activity android:name=".ApplianceListActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".TutorialActivity"></activity>
     </application>
 
 </manifest>

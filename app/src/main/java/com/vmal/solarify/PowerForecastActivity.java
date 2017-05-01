@@ -80,6 +80,8 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_power_forecast);
 
+
+
         mGoogleApiClient = new GoogleApiClient.Builder(this)
                 .addConnectionCallbacks(this)
                 .addOnConnectionFailedListener(this)
@@ -141,6 +143,11 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
+                        if(!dataSnapshot.exists()){
+                            startActivity(new Intent(PowerForecastActivity.this,ApplianceListActivity.class));
+                            finish();
+                            return;
+                        }else         getPowerData();
                         for (DataSnapshot snap : dataSnapshot.getChildren()){
                             if(snap.child("number_of_devices").getValue(int.class)>0) {
                                 totalconsumption += snap.child("number_of_devices").getValue(int.class)
@@ -156,7 +163,6 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
                     }
                 });
-        getPowerData();
 
         avgConsumption.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -348,6 +354,8 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         // poaToProduction();
 
         currentDay.setText(poaToProduction(week[0]) + "kWh");
+        findViewById(R.id.login_progress).setVisibility(View.GONE);
+        findViewById(R.id.power_forecase_activity).setVisibility(View.VISIBLE);
         Log.d("vero", week[1] + "");
         Log.d("vero", poaToProduction(week[1]) + "");
         Day1.setText(poaToProduction(week[1]) + "\nkWh\n" + d1);

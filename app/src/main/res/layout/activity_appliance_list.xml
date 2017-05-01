@@ -17,7 +17,7 @@
 
         android:gravity="center"
         android:textSize="22sp"
-        android:text="Select the number od Appliances that you own?"/>
+        android:text="Select the number of appliances that you own?"/>
     <ListView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
