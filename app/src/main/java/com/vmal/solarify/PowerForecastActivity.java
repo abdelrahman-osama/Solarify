@@ -90,9 +90,6 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         boolean enabled = service
                 .isProviderEnabled(LocationManager.GPS_PROVIDER);
 
-        // check if enabled and if not send user to the GSP settings
-        // Better solution would be to display a dialog and suggesting to
-        // go to the settings
         if (!enabled) {
             Intent intent = new Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
             startActivity(intent);
@@ -161,8 +158,6 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         avgConsumption.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i = new Intent(PowerForecastActivity.this,  ApplianceListActivity.class);
-//                startActivity(i);
             }
         });
 
@@ -221,7 +216,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
                         Log.d("testData", testData2);
 
                         acData = acDataString.split(",");
-                        // Log.d("DataInStringArray", acData[13]);
+
                         runOnUiThread(new Runnable() {
                             @Override
                             public void run() {
@@ -398,7 +393,6 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
 
            }
        else{ // bigger than zero
-
            if(month == 9 || month == 10 || month == 11){
                season = "fall";
            }else
