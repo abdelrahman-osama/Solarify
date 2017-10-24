@@ -349,6 +349,14 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
                 d5 = "Thu";
                 d6 = "Fri";
                 break;
+            default:
+                d1 = "Sun";
+                d2 = "Mon";
+                d3 = "Tue";
+                d4 = "Wed";
+                d5 = "Thu";
+                d6 = "Fri";
+                break;
         }
 
         // poaToProduction();
