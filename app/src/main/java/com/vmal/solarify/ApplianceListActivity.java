@@ -108,7 +108,6 @@ public class ApplianceListActivity extends AppCompatActivity {
                     String formula_value = jo_inside.getString("A");
                     String url_value = jo_inside.getString("B");
 
-                    //Add your values in your `ArrayList` as below:
                     m_li = new HashMap<String, String>();
                     m_li.put("appliances", formula_value);
                     m_li.put("value", url_value);
