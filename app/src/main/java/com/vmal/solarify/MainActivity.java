@@ -169,6 +169,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
             // Start home activity
             startActivity(new Intent(this, PlanetActivity.class));
             finish();
+            //this sends you to the next page
         }
     }
 
