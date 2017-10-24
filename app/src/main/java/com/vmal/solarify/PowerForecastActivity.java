@@ -199,7 +199,7 @@ public class PowerForecastActivity extends AppCompatActivity implements Location
         String losses = "0"; //fixed
         String dataset = "intl";
         String timeFrame = "hourly";
-        String radius = "900";
+        String radius = "1200";
 
         final String JSONRequest = BASE_URL + "&lat=" + lati + "&lon=" + lon + "&system_capacity=" + systemCapacity + "&azimuth=" + azimuth
                 + "&tilt=" + tilt + "&array_type=" + arrayType + "&module_type=" + moduleType + "&losses=" +
