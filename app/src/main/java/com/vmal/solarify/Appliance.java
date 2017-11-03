@@ -7,9 +7,16 @@ package com.vmal.solarify;
 public class Appliance {
     String name;
     int value;
+    int pos;
 
     public Appliance(String name, int value) {
         this.name = name;
         this.value = value;
+    }
+
+    public Appliance(String name, int value,int pos) {
+        this.name = name;
+        this.value = value;
+        this.pos = pos;
     }
 }

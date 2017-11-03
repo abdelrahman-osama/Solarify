@@ -36,6 +36,7 @@
                 android:src="@drawable/ic_remove_black_24dp"
                 android:id="@+id/ad_max_g_text_minus"
                 android:alpha=".12"
+                android:padding="8dp"
                 android:background="@color/transparent"
 
                 />
@@ -82,6 +83,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:src="@drawable/ic_add_primary_color_24dp"
+                android:padding="8dp"
                 android:foregroundTint="@color/colorPrimary"
                 android:id="@+id/ad_max_g_text_plus"
                 android:background="@color/transparent" />
